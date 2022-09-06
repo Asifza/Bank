@@ -6,7 +6,7 @@ import transactions
 
 con = c.connect(host="localhost", user= "root", passwd= "P@$$ward1", database= "bank")
 Cursor = con.cursor()
-
+acl = 1
 def balance():
     Sel_cust = "select * from customers where account_no = ({})".format(ACC_NO)
     Cursor.execute(Sel_cust)
